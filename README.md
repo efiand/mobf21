@@ -4,4 +4,4 @@
 
 ## Опубликованная версия
 
-efiand.github.io/mobf21
+[efiand.github.io/mobf21](https://efiand.github.io/mobf21)
