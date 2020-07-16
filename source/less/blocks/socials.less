@@ -1,0 +1,41 @@
+.socials {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 25px 30px;
+	padding: 0;
+	list-style: none;
+}
+
+.socials__item {
+	margin: 0 5px;
+}
+
+.socials__link {
+	display: block;
+	width: 68px;
+	height: 71px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100px;
+	background-image: url("../img/socials.png");
+	background-repeat: no-repeat;
+
+	&--1 {
+		width: 67px;
+		background-position: 0 0;
+	}
+
+	&--2 {
+		background-position: -67px 0;
+	}
+
+	&--3 {
+		background-position: -135px 0;
+	}
+
+	&--4 {
+		width: 81px;
+		background-position: -203px 0;
+	}
+}

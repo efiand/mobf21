@@ -1,0 +1,55 @@
+{% extends '../layout.twig' %}
+
+{% set contacts_addition %}
+	<dt class="defs__title">
+		Президент Фонда:
+	</dt>
+	<dd class="defs__descr">
+		Середа Василий Михайлович
+	</dd>
+	<dt class="defs__title">
+		По вопросам благотворительности:
+	</dt>
+	<dd class="defs__descr">
+		+7 (921) 095-16-04,<br>
+		+7 (812) 299-48-02<br>
+		Олин Валерий
+	</dd>
+{% endset %}
+
+{% block main %}
+	<section class="sect content__item content__item--2third">
+		<h3 class="sect__title sect__title--green">
+			Как помочь
+		</h3>
+		<p class="sect__descr">
+			С мая 2011 года деятельность Центра приостановлена в связи с отсутствием финансирования. Все помещения, кабинеты и детские спальни полностью оборудованы для пребывания здесь детей и их реабилитации, но, к сожалению, детей не на что содержать, кормить, развивать и нечем платить заработную плату работникам. Если Вы неравнодушны к проблемам детей, внесите свой вклад в благотворительность.
+		</p>
+		<p class="sect__descr">
+			Если у Вас возникло желание помочь детям, находящемся в трудной жизненной ситуации, то мы рады будем любой помощи.
+		</p>
+		<p class="sect__descr sect__descr--help">
+			Наш Фонд будет признателен за оказание помощи юридического характера по вопросам сопровождения в судах дел об ограничении / лишении прав родителей ребенка.
+		</p>
+		<p class="sect__descr">
+			Вы можете стать волонтером или оказать финансовую помощь.
+		</p>
+		<p class="sect__descr sect__descr--help">
+			Программа частных пожертвований Благо.ру. На сайте www.blago.ru вы можете легко и просто
+			сделать пожертвование в адрес нашей организации прямым переводом с Вашего банковского счета.
+		</p>
+	</section>
+	<div class="content__item content__item--third">
+		<section class="sect"  itemscope itemtype="http://schema.org/Place">
+			{% include '../partials/contacts.twig' %}
+		</section>
+		<section class="sect">
+			<h3 class="sect__title">
+				Наши реквизиты
+			</h3>
+			<a class="sect__link sect__link--help" href="files/rekvizity_fonda_sberbank.docx">
+				Скачать
+			</a>
+		</section>
+	</div>
+{% endblock %}

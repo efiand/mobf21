@@ -1,0 +1,24 @@
+{% extends '../layout.twig' %}
+
+{% block main %}
+	<ul class="projects {{ page == 'projects/index' ? 'projects--index' : 'content__item content__item--quart' }}">
+		{% for project in projectsList %}
+			{% if page == project.page %}
+				<li class="projects__item projects__item--current">
+					<a class="projects__link">{{ project.title }}</a>
+				</li>
+			{% else %}
+				<li class="projects__item">
+					<a class="projects__link" href="{{ pathToRoot }}{{ project.page }}.html">{{ project.title }}</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+
+	{% block content %}
+		<section class="sect content__item content__item--3quart">
+			<h3 class="sect__title sect__title--orange">{{ title }}</h3>
+			{% block content_body %}{% endblock %}
+		</section>
+	{% endblock %}
+{% endblock %}

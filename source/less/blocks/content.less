@@ -1,0 +1,31 @@
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.content__item {
+	width: 100%;
+
+	&--quart {
+		width: (940px * 1/4);
+	}
+
+	&--3quart {
+		width: (940px * 3/4 + 30);
+	}
+
+	&--third {
+		width: (940px * 1/3);
+	}
+
+	&--2third {
+		width: (940px * 2/3 + 30);
+	}
+
+	&--half {
+		width: 485px;
+	}
+}

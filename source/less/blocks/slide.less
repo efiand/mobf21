@@ -1,0 +1,35 @@
+.slide {
+	position: relative;
+	margin-bottom: 30px;
+
+	&--index {
+		display: flex;
+	}
+}
+
+.slide__lead {
+	width: calc(50% - 15px);
+	margin-left: 30px;
+}
+
+.slide__title {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 20px 30px;
+	font-weight: 400;
+	font-size: 21px;
+	color: #ffffff;
+	background-color: rgba(21, 150, 249, 0.5);
+}
+
+.slide__img {
+	display: block;
+
+	&--index {
+		object-fit: cover;
+		width: calc(50% - 15px);
+	}
+}
