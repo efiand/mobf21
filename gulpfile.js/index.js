@@ -6,8 +6,8 @@ const tasks = require(`require-dir`)(`tasks`);
 const { twighint, stylelint, eslint, clean, copy, html, css, server } = tasks;
 
 const test = parallel(twighint, stylelint, eslint);
-const build = series(parallel(test, clean), parallel(copy, html, css));
+const build = series(parallel(test, clean), parallel(copy, css));
 
 exports.test = test;
-exports.build = build;
+exports.build = series(build, html);
 exports.default = series(build, server);

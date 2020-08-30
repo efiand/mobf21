@@ -28,6 +28,11 @@ const pages = [
 	{
 		page: `info`,
 		title: `Полезно знать`
+	},
+	{
+		hideInMenu: true,
+		page: `404`,
+		title: `Страница не найдена`
 	}
 ];
 
@@ -41,7 +46,7 @@ module.exports = {
 			descr,
 			host,
 			isProjectPage,
-			pages,
+			pages: pages.filter((item) => !item.hideInMenu),
 			projectsList,
 			siteHeading,
 			siteName,

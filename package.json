@@ -26,15 +26,17 @@
 		"gulp-twig": "^1.2.0",
 		"gulp-w3c-html-validator": "^2.0.1",
 		"mqpacker": "^7.0.0",
+		"nodemon": "2.0.4",
 		"precommit": "^1.2.2",
 		"require-dir": "^1.2.0",
 		"stylelint": "^13.6.1",
 		"stylelint-efiand": "^0.1.14"
 	},
 	"scripts": {
+		"server": "nodemon ./gulpfile.js/server.js",
 		"start": "gulp",
-		"test": "gulp test && bem-validate build/**/*.html",
-		"build": "cross-env NODE_ENV=production gulp build",
+		"test": "gulp test",
+		"build": "cross-env NODE_ENV=production gulp build && bem-validate build/**/*.html",
 		"deploy": "gh-pages -d build"
 	},
 	"precommit": [
@@ -48,5 +50,9 @@
 		"extends": [
 			"stylelint-efiand"
 		]
+	},
+	"dependencies": {
+		"express": "4.17.1",
+		"twig": "1.15.2"
 	}
 }
