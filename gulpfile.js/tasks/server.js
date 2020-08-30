@@ -2,7 +2,7 @@ const { series, watch } = require(`gulp`);
 const tasks = require(`require-dir`)(`.`);
 const { twighint, stylelint, eslint, copy, html, css } = tasks;
 const browserSync = require(`browser-sync`).create();
-const { copySource } = require(`../const`);
+const { copySource, dist, eslintSource } = require(`../const`);
 
 const opts = {
 	cors: true,
@@ -18,7 +18,7 @@ if (siteArg) {
 	// Пример запуска с проксированием домена (Open Server etc.): `yarn start -- --mylocaldomain.dev`
 	opts.proxy = `https://${siteArg.slice(ARG_DASHES_COUNT)}`;
 } else {
-	opts.server = `build`;
+	opts.server = dist;
 }
 
 const reload = (done) => {
@@ -31,7 +31,7 @@ const server = () => {
 
 	watch(`source/**/*.twig`, series(twighint, html, reload));
 	watch(`source/less/**/*.less`, series(stylelint, css, reload));
-	watch([`source/**/*.js`, `gulpfile.js/**/*.js`], series(eslint));
+	watch(eslintSource, series(eslint));
 	watch(copySource, series(copy, reload));
 };
 
